@@ -33,8 +33,8 @@ const unsigned long eyemoveInterval3 = 10000;
 const unsigned long eyemoveInterval4 = 11000;
 const unsigned long eyemoveInterval5 = 15000;
 
-const unsigned long LEDinterval = 8000;
-const unsigned long bigservointerval = 10000;
+const unsigned long LEDinterval = 20000;
+const unsigned long bigservointerval = 25000;
 
 void setup()
 {
@@ -108,8 +108,8 @@ void loop()
   
   if (currentMillis - bigservoPreviousMillis >= bigservointerval)
   {
-    bigservo1.write(180);
-    bigservo2.write(0);
+    bigservo1.write(0);
+    bigservo2.write(180);
     bigservoPreviousMillis = currentMillis;
   }
   
