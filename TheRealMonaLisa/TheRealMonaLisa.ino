@@ -44,11 +44,11 @@ void setup()
   pinMode(LEDpin1, OUTPUT);
   pinMode(LEDpin2, OUTPUT);
   
-  pinMode(eyeservoPin1, OUTPUT);
-  pinMode(eyeservoPin2, OUTPUT);
+  //pinMode(eyeservoPin1, OUTPUT);
+ // pinMode(eyeservoPin2, OUTPUT);
   
-  pinMode(bigservoPin1, OUTPUT);
-  pinMode(bigservoPin2, OUTPUT);
+ // pinMode(bigservoPin1, OUTPUT);
+ // pinMode(bigservoPin2, OUTPUT);
   
   eyeservo1.attach(eyeservoPin1);
   eyeservo2.attach(eyeservoPin2);
@@ -56,20 +56,16 @@ void setup()
   bigservo1.attach(bigservoPin1);
   bigservo2.attach(bigservoPin2);
   
+  bigservo1.write(90);
+  bigservo2.write(90);
+  delay(1000);
   
 }
 
 void loop()
 {
-  unsigned long currentMillis = millis();
-  
-  if (currentMillis <= 1000)
-  {
-    bigservo1.write(90);
-    bigservo2.write(90);
-  }
-  
-    
+ 
+ 
   
     
   if (currentMillis - eyemovePreviousMillis1 >= eyemoveInterval1)
