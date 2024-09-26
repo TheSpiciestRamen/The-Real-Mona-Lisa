@@ -64,7 +64,7 @@ void setup()
 
 void loop()
 {
- 
+ unsigned long currentMillis = millis();
  
   
     
@@ -105,7 +105,7 @@ void loop()
   if (currentMillis - bigservoPreviousMillis >= bigservointerval)
   {
     bigservo1.write(0);
-    bigservo2.write(180);
+    bigservo2.write(150);
     bigservoPreviousMillis = currentMillis;
   }
   
